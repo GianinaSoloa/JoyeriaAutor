@@ -7,8 +7,8 @@ const CartWidget = () => {
     const {qtyProducts} = useContext(CartContext)
     return (
         <>
-        <p>{qtyProducts}</p>
         <ShoppingCartIcon className="iconCart"/>
+        <p className='quantity__cartwidget'>{qtyProducts}</p>
         </>
     )
 }

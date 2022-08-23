@@ -3,25 +3,25 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 const ItemCount = ({initial, stock, onAdd}) =>{
-    const[clicks, setClicks] = useState(initial);
+    const[quantity, setQuantity] = useState(initial);
 
-    const decreaseClick = () =>{
-        clicks > initial ? setClicks(clicks-1) : alert("mínimo disponible");
+    const decreaseQuantity = () =>{
+        quantity > initial ? setQuantity(quantity-1) : alert("mínimo disponible");
     }
 
-    const increaseClick = () =>{
-        clicks < stock ? setClicks(clicks+1) : alert("no hay más stock");
+    const increaseQuantity = () =>{
+        quantity < stock ? setQuantity(quantity+1) : alert("no hay más stock");
     }
 
 
     return (
         <div className="container__itemCount">
             <div className="itemCount">
-                <button onClick={decreaseClick}> - </button>
-                <div className="clicks">{clicks}</div>
-                <button onClick={increaseClick}> + </button>
+                <button onClick={decreaseQuantity}> - </button>
+                <div className="clicks">{quantity}</div>
+                <button onClick={increaseQuantity}> + </button>
             </div>
-            <Link to={"/cart"}><button onClick={()=>onAdd(clicks)}> AGREGAR AL CARRITO </button></Link>
+            <Link to={"/cart"}><button onClick={()=>onAdd(quantity)}> AGREGAR AL CARRITO </button></Link>
         </div>
         
     )

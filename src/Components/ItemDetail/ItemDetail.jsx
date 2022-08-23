@@ -29,7 +29,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) => {
                     <h4 className='detail__description'>{description}</h4>
                     <h4>${price}</h4>
                     {quantityInCart === 0 ? (
-                    <ItemCount initial={1} stock={3} onAdd={handleAdd} />)
+                    <ItemCount initial={1} stock={stock} onAdd={handleAdd} />)
                     : (<Link to={"/cart"}><button> IR AL CARRITO </button></Link>)
                     }
                 </div>    
