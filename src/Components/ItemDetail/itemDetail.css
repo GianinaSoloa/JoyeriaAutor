@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "autosignature";
+    src: url("/src/Assets/fonts/aAutoSignature.ttf") format("truetype");
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.detail__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail__text{
+    font-family: "Josefin Sans", sans-serif;
+    color: #2d2a2a; 
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail__text > h3{
+    width: 300px;
+    margin: 25px;
+    text-align: center;
+}
+
+.detail__description{
+    width: 300px;
+    margin: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.detail__text > h4{
+    margin: 25px;
+    text-align: center;
+}
