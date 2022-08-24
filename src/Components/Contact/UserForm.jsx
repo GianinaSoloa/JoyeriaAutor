@@ -41,52 +41,48 @@ const [userData, setUserData] = useState({
     <div className="form-container">
       <form onReset={handleReset} onSubmit={handleSubmit}>
         <div className="form-item">
-          <label htmlFor="name">Nombre Completo</label>
           <input
             value={userData.name}
             onChange={inputChangeHandler}
             name="name"
             type="text"
-            placeholder="Nombre"
+            placeholder="NOMBRE COMPLETO"
           />
         </div>
 
         <div className="form-item">
-          <label htmlFor="telefono">Teléfono</label>
           <input
             value={userData.telefono}
             onChange={inputChangeHandler}
             name="telefono"
             type="text"
-            placeholder="Telefono"
+            placeholder="TELÉFONO"
           />
         </div>
 
         <div className="form-item">
-          <label htmlFor="email">Email</label>
           <input
             value={userData.email}
             onChange={inputChangeHandler}
             name="email"
             type="text"
-            placeholder="Correo"
+            placeholder="EMAIL"
           />
         </div>
 
         <div className="form-item">
-          <label htmlFor="email">Consulta</label>
           <input
             value={userData.email}
             onChange={inputChangeHandler}
             name="email"
             type="text"
-            placeholder="Correo"
+            placeholder="CONSULTA"
           />
         </div>
 
         <div>
-          <button type="submit">Enviar</button>
-          <button type="reset">Cancelar</button>
+          <button type="submit">ENVIAR</button>
+          <button type="reset">CANCELAR</button>
         </div>
       </form>
     </div>

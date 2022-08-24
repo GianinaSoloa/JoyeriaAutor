@@ -25,7 +25,7 @@
     transition: all 1s;
 }
 
-.detail__text > div > a > button{
+.buttonStyle{
     background-color: #f6f2ec;
     border: none;
     width: 179px;
@@ -37,7 +37,7 @@
     margin-top: 15px;
 }
 
-.detail__text > div > a > button:hover{
+.buttonStyle:hover{
     background-color: #d6cbc4;
 }
 

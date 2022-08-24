@@ -18,15 +18,15 @@ const CartProvider = ({ children }) =>{
 
     )
 
-    const addToCart = (item, quantity) => {
+    const addToCart = (item) => {
         let cartCopy = [...cartItems];
         if (isInCart(item.id)) {
-            const found = cartItems.find (i => i.id === item.id);
+            const found = cartItems.find (i => i.id === Number(item.id));
             const index = cartItems.indexOf(found);
             cartCopy[index].quantity += item.quantity;
             setCartItems(cartCopy)
         } else {
-            cartCopy.push({...item, quantity});
+            cartCopy.push({...item});
             setCartItems(cartCopy)
         };
     }
@@ -36,9 +36,10 @@ const CartProvider = ({ children }) =>{
     }
 
     const isInCart = (id) => {
-        return (cartItems.some (itemInCart => itemInCart.id === id));
+        return (cartItems.some (itemInCart => itemInCart.id === Number(id)));
     }
-    
+
+
     const clear = () => {
         setCartItems([]);
     }

@@ -11,8 +11,8 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) => {
     const {addToCart} = useContext(CartContext);
 
     const handleAdd = (quantity) =>{
-        const itemToCart = {id, title, description, price, pictureUrl, stock}
-        addToCart(itemToCart, quantity)
+        const itemToCart = {id, title, description, price, pictureUrl, stock,quantity}
+        addToCart(itemToCart)
         setquantityInCart(quantity);
             Swal.fire(
                 `${quantity} items añadidos al carrito`
@@ -27,10 +27,10 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) => {
                 <div className='detail__text'>
                     <h3>{title}</h3>
                     <h4 className='detail__description'>{description}</h4>
-                    <h4>${price}</h4>
+                    <p className='price'>${price}</p>
                     {quantityInCart === 0 ? (
                     <ItemCount initial={1} stock={stock} onAdd={handleAdd} />)
-                    : (<Link to={"/cart"}><button> IR AL CARRITO </button></Link>)
+                    : (<Link to={"/cart"}><button className="buttonStyle"> IR AL CARRITO </button></Link>)
                     }
                 </div>    
             </div>      

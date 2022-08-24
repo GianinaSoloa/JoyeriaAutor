@@ -8,8 +8,10 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import Cart from './Components/Cart/Cart'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from './Components/Store/CartContext';
+import firestoreDB from './services/firebase';
 
 function App() {
+  console.log(firestoreDB)
   return (
     <div>
         <BrowserRouter>

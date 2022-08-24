@@ -42,6 +42,14 @@
 }
 
 .detail__text > h4{
-    margin: 25px;
+    margin: 15px;
     text-align: center;
+    
+}
+
+.price{
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
 }
