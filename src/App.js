@@ -13,6 +13,7 @@ import Checkout from './Components/Cart/Checkout';
 import Footer from './Components/Footer/Footer';
 
 
+
 function App() {
   console.log(firestoreDB)
   return (
