@@ -9,6 +9,9 @@ import Cart from './Components/Cart/Cart'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from './Components/Store/CartContext';
 import firestoreDB from './services/firebase';
+import Checkout from './Components/Cart/Checkout';
+import Footer from './Components/Footer/Footer';
+
 
 function App() {
   console.log(firestoreDB)
@@ -25,7 +28,9 @@ function App() {
               <Route path="/category/:category" element={<ItemListContainer/>} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="/cart" element={<Cart/>} />
+              <Route path="/checkout" element={<Checkout/>} />
             </Routes>
+            <Footer/>
           </CartProvider>
         </BrowserRouter>
     </div>

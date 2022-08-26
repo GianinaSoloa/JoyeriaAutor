@@ -1,0 +1,32 @@
+footer{
+    background-color: #d6cbc4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer__contact{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2d2a2a;
+}
+
+.social__media{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__contact{
+    color: #f6f2ec;
+    font-size: 21px;
+    margin-top: 50%;
+}
+
+.icon__contact:hover{
+    color: #aa9c94;
+}

@@ -80,9 +80,9 @@ const [userData, setUserData] = useState({
           />
         </div>
 
-        <div>
-          <button type="submit">ENVIAR</button>
-          <button type="reset">CANCELAR</button>
+        <div className="forms__buttons">
+          <button className="button__form" type="submit">ENVIAR</button>
+          <button className="button__form" type="reset">CANCELAR</button>
         </div>
       </form>
     </div>

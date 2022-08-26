@@ -22,15 +22,21 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) => {
     return (
             <div className="detail">
                 <div className='detail__image'>
-                    <img className="cart__image" src={pictureUrl} alt="Anillo Cómo Decírtelo Joyas" />
+                    <img src={pictureUrl} alt="Cómo Decírtelo Joyas" />
                 </div>    
                 <div className='detail__text'>
                     <h3>{title}</h3>
                     <h4 className='detail__description'>{description}</h4>
                     <p className='price'>${price}</p>
                     {quantityInCart === 0 ? (
-                    <ItemCount initial={1} stock={stock} onAdd={handleAdd} />)
-                    : (<Link to={"/cart"}><button className="buttonStyle"> IR AL CARRITO </button></Link>)
+                    <ItemCount initial={1} stock={stock} onAdd={handleAdd} />                    
+                    )
+                    : (
+                    <>
+                    <Link to={"/cart"}><button className="viewcart__button"> IR AL CARRITO </button></Link>
+                    <Link to={"/shop"}><button className="viewcart__button shop"> SEGUIR COMPRANDO </button></Link>
+                    </>
+                    )
                     }
                 </div>    
             </div>      

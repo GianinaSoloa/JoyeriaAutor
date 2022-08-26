@@ -1,7 +1,8 @@
-@font-face {
-    font-family: "autosignature";
-    src: url("/src/Assets/fonts/aAutoSignature.ttf") format("truetype");
+
+.container__items{
+    height: 1200px;
 }
+
 .container__items h1{
     margin-top: 5%;
     text-align: center;
@@ -9,3 +10,4 @@
     font-size: 43px;
     font-weight: 500; 
 }
+

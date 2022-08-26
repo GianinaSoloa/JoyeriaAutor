@@ -2,7 +2,7 @@ import "../Us/us.css";
 
 const Us = () => {
     return (
-        <div className="menu__container">
+        <div className="us">
             <h1>ESTA ES LA PÁGINA DE QUIÉNES SOMOS - NOSOTROS</h1>
         </div>
     )

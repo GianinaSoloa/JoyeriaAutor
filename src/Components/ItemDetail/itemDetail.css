@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.detail__image > img{
+    width: 350px;
+}
+
 .detail__text{
     font-family: "Josefin Sans", sans-serif;
     color: #2d2a2a; 
@@ -52,4 +56,13 @@
     text-align: center;
     font-size: 15px;
     font-weight: 600;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #d6cbc4!important;
+    color: #fff;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: 0 0 0 3px #d6cbc4!important;
 }

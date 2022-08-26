@@ -1,0 +1,141 @@
+
+.emptycart{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15%;
+    height: 500px;
+}
+
+.emptycart p{
+    margin-bottom: 5%;
+}
+
+.buy{
+    background-color: #f6f2ec;
+    border: none;
+    width: 179px;
+    padding: 2%;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #2d2a2a; 
+}
+
+.buy:hover{
+    background-color: #d6cbc4;
+}
+
+.cart__table{
+    width: 100%
+}
+
+thead {
+    background: #d6cbc4;
+    color: #2d2a2a;
+}
+
+.cart__table table{
+    width: 100%;
+    margin-top: 3%;
+}
+
+th{
+    padding:30px;
+}
+
+td{
+    text-align: center;
+}
+
+td p{
+    font-size: 12px;
+}
+
+.item__img img{
+    width: 60px;
+}
+
+.item__remove img{
+    width: 30px;
+}
+
+.button{
+    background-color: #f6f2ec;
+    font-family: "Josefin Sans", sans-serif;
+    color: #2d2a2a; 
+    border: none;
+    padding: 18px;
+    margin: 1%;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.button:hover{
+    background-color: #d6cbc4;
+    transition: all 1s;
+}
+
+.buy{
+    background-color: #d6cbc4;
+}
+
+.buy:hover{
+    background-color: #f6f2ec;
+    transition: all 1s;
+}
+
+.cart{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cart__title{
+    font-family: "autosignature";
+    font-size: 41px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.title__table{
+    background-color: #d6cbc4;
+    margin-top: 5%;
+}
+
+.totalCart{
+    background-color: #f6f2ec;
+    width: 100%;
+}
+
+.cart__totals{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 5% 0;
+}
+
+.cart__totals h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.checkout{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}

@@ -3,6 +3,9 @@
     src: url("/src/Assets/fonts/aAutoSignature.ttf") format("truetype");
 }
 
+.container__item{
+    height: 700px;
+}
 
 .container__item h1{
     margin: 5%;

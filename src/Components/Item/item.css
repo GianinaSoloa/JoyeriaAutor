@@ -10,7 +10,7 @@
     margin-top: 8%;
 }
 
-.cart{
+.item{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -19,7 +19,7 @@
     margin-bottom: 5%;
 }
 
-.cart > a >button{
+.item > a >button{
     background-color: #f6f2ec;
     font-family: "Josefin Sans", sans-serif;
     color: #2d2a2a; 
@@ -31,17 +31,17 @@
     font-size: 13px;
 }
 
-.cart > a >button:hover{
+.item > a >button:hover{
     background-color: #d6cbc4;
     transition: all 1s;
 }
 
-.cart__image{
+.item__image{
     width: 300px;
     height: 300px; 
 }
 
-.cart h3, .cart h4{
+.item h3, .item h4{
     margin-top: 3%;
     font-weight: 600;
 }
