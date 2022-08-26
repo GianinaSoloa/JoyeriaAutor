@@ -11,7 +11,7 @@ import CartProvider from './Components/Store/CartContext';
 import firestoreDB from './services/firebase';
 import Checkout from './Components/Cart/Checkout';
 import Footer from './Components/Footer/Footer';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

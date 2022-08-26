@@ -18,8 +18,7 @@ const Cart = () => {
             <>
                 <p className="cart__title">Tu pedido por el momento:</p>
                 <div className="cart">
-                    
-                    <table className="title__table">
+                    <table>
                         <thead>
                             <tr className="itemslist__title">
                                 <th className="itemlist__remove">&nbsp;</th>
@@ -30,19 +29,19 @@ const Cart = () => {
                                 <th className="itemlist__subtotal">SUBTOTAL</th>
                             </tr>
                         </thead>
+                        <tbody>
+                        {cartItems.map ((item, index)  =>(
+                            <CartView 
+                            key={item.id}
+                            id={item.id}
+                            title={item.title} 
+                            price={item.price}
+                            pictureUrl={item.pictureUrl} 
+                            quantity={item.quantity} 
+                            />
+                        ))}
+                        </tbody>
                     </table>
-                    {cartItems.map ((item, index)  =>(
-                        <CartView 
-                        key={item.id}
-                        id={item.id}
-                        title={item.title} 
-                        price={item.price}
-                        pictureUrl={item.pictureUrl} 
-                        quantity={item.quantity} 
-                        />
-                    ))}
-
-
                     <div className="cart__totals">
                         <h2>TOTAL COMPRA</h2>
                         <table className="totalCart">

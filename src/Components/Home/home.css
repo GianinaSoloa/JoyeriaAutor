@@ -1,3 +1,23 @@
 .home{
-    height: 800px;
+    height: auto;
+}
+
+span.sr-only{
+    display: none;
+}
+
+.container__home{
+    height: 500px;
+}
+
+.container__home p{
+    text-align: center;
+    padding: 0 10%;
+}
+
+.home h1{
+    font-family: "autosignature";
+    font-size: 43px;
+    text-align: center;
+    margin-top: 5%;
 }

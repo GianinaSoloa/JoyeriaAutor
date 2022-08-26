@@ -1,3 +1,51 @@
+table{
+    border-spacing: 0;
+    width: 100%;
+}
+
+thead{
+    background-color: #d6cbc4;
+}
+
+thead tr{
+    line-height: 45px;
+}
+
+tr{
+    text-align: center;
+    line-height: 43px
+}
+
+td p {
+    font-size: 12px;
+}
+
+.cart__title{
+    font-family: "autosignature";
+    font-size: 41px;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.item__img img{
+    width: 60px;
+}
+
+.item__remove img{
+    width: 30px;
+}
+
+.cart{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 
 .emptycart{
     font-size: 25px;
@@ -25,40 +73,6 @@
     background-color: #d6cbc4;
 }
 
-.cart__table{
-    width: 100%
-}
-
-thead {
-    background: #d6cbc4;
-    color: #2d2a2a;
-}
-
-.cart__table table{
-    width: 100%;
-    margin-top: 3%;
-}
-
-th{
-    padding:30px;
-}
-
-td{
-    text-align: center;
-}
-
-td p{
-    font-size: 12px;
-}
-
-.item__img img{
-    width: 60px;
-}
-
-.item__remove img{
-    width: 30px;
-}
-
 .button{
     background-color: #f6f2ec;
     font-family: "Josefin Sans", sans-serif;
@@ -84,36 +98,14 @@ td p{
     transition: all 1s;
 }
 
-.cart{
-    width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.cart__title{
-    font-family: "autosignature";
-    font-size: 41px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.title__table{
-    background-color: #d6cbc4;
-    margin-top: 5%;
-}
-
 .totalCart{
     background-color: #f6f2ec;
     width: 100%;
+    padding: 10% 0;
 }
 
 .cart__totals{
-    width: 42%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -139,3 +131,4 @@ td p{
     align-items: center;
     margin-top: 3%;
 }
+

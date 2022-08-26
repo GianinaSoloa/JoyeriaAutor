@@ -42,7 +42,7 @@ form{
 input{
     width: 100%;
     padding: 8px;
-    font-size: 9px;
+    font-size: 9px !important;
 }
 
 input:focus-visible{
