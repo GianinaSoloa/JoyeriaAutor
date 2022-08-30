@@ -5,8 +5,8 @@ function UserForm() {
 const [userData, setUserData] = useState({
     name: "",
     email: "",
-    telefono: "",
-    consulta:"",
+    phone: "",
+    consult:"",
   });
   
   function handleSubmit(evt) {
@@ -15,8 +15,8 @@ const [userData, setUserData] = useState({
     setUserData({
       name: "",
       email: "",
-      telefono: "",
-      consulta:"",
+      phone: "",
+      consult:"",
     });
   }
   function inputChangeHandler(evt) {
@@ -35,7 +35,7 @@ const [userData, setUserData] = useState({
     setUserData({
       name: "",
       email: "",
-      telefono: "",
+      phone: "",
     });
   } */
 
@@ -55,9 +55,9 @@ const [userData, setUserData] = useState({
 
         <div className="form-item">
           <input
-            value={userData.telefono}
+            value={userData.phone}
             onChange={inputChangeHandler}
-            name="telefono"
+            name="phone"
             type="text"
             placeholder="TELÉFONO"
             required
@@ -77,9 +77,9 @@ const [userData, setUserData] = useState({
 
         <div className="form-item">
           <input
-            value={userData.email}
+            value={userData.consult}
             onChange={inputChangeHandler}
-            name="consulta"
+            name="consult"
             type="text"
             placeholder="CONSULTA"
           />

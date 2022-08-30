@@ -78,9 +78,9 @@ const Checkout = () => {
 
                     <div className="form-item">
                         <input
-                            value={userBuyer.telefono}
+                            value={userBuyer.phone}
                             onChange={inputChangeHandler}
-                            name="telefono"
+                            name="phone"
                             type="text"
                             placeholder="TELÉFONO"
                             required
