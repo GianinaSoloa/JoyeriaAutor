@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import { CartContext } from "../Store/CartContext";
+import { CartContext } from '../../Store/CartContext';
 import { Link } from "react-router-dom";
-import CartView from "./CartView";
-import "../Cart/cartView.css";
+import CartView from "../CartView/CartView";
+import "../CartView/cartView.css";
 
 const Cart = () => {
-    const {cartItems,clear,totalPrice} = useContext(CartContext);
+    const { cartItems, clear, totalPrice } = useContext(CartContext);
     if (cartItems.length === 0) {
         return(
         <div className="emptycart">
@@ -60,7 +60,7 @@ const Cart = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        <div className="checkout">
+                        <div className="finalstep">
                             <button className="button" onClick={clear}> VACIAR CARRITO </button>
                             <Link to={"/checkout"}><button className="button buy">FINALIZAR COMPRA</button></Link>
                         </div>

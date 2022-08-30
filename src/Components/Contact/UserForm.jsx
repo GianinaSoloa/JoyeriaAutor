@@ -6,6 +6,7 @@ const [userData, setUserData] = useState({
     name: "",
     email: "",
     telefono: "",
+    consulta:"",
   });
   
   function handleSubmit(evt) {
@@ -15,6 +16,7 @@ const [userData, setUserData] = useState({
       name: "",
       email: "",
       telefono: "",
+      consulta:"",
     });
   }
   function inputChangeHandler(evt) {
@@ -29,17 +31,17 @@ const [userData, setUserData] = useState({
     setUserData(copyUserData);
   }
 
-  function handleReset(evt) {
+  /* function handleReset(evt) {
     setUserData({
       name: "",
       email: "",
       telefono: "",
     });
-  }
+  } */
 
   return (
     <div className="form-container">
-      <form onReset={handleReset} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="form-item">
           <input
             value={userData.name}
@@ -47,6 +49,7 @@ const [userData, setUserData] = useState({
             name="name"
             type="text"
             placeholder="NOMBRE COMPLETO"
+            required
           />
         </div>
 
@@ -57,6 +60,7 @@ const [userData, setUserData] = useState({
             name="telefono"
             type="text"
             placeholder="TELÉFONO"
+            required
           />
         </div>
 
@@ -67,6 +71,7 @@ const [userData, setUserData] = useState({
             name="email"
             type="text"
             placeholder="EMAIL"
+            required
           />
         </div>
 
@@ -74,7 +79,7 @@ const [userData, setUserData] = useState({
           <input
             value={userData.email}
             onChange={inputChangeHandler}
-            name="email"
+            name="consulta"
             type="text"
             placeholder="CONSULTA"
           />
@@ -82,7 +87,6 @@ const [userData, setUserData] = useState({
 
         <div className="forms__buttons">
           <button className="button__form" type="submit">ENVIAR</button>
-          <button className="button__form" type="reset">CANCELAR</button>
         </div>
       </form>
     </div>

@@ -21,3 +21,12 @@ span.sr-only{
     text-align: center;
     margin-top: 5%;
 }
+
+.carousel, .carousel-inner {
+    height: 650px;
+}
+
+.carousel-item > img{
+    height: 650px;
+    object-fit: cover;
+}

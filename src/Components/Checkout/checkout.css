@@ -1,0 +1,65 @@
+.checkout{
+    height: 700px;
+}
+
+.checkout p{
+    font-size: 33px;
+    margin: 5% 0;
+    text-align: center;
+}
+
+.thanks__container{
+    height: 600px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.thanks__icon{
+    background-color: #d6cbc4;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanks__icon svg{
+    color: #f6f2ec;
+    font-size: 39px;
+}
+
+.thanks__container h2{
+    font-size: 23px;
+    margin: 1% 0;
+    text-align: center;
+}
+.colored{
+    color: #d6cbc4;
+}
+
+.thanks__container p{
+    font-size: 18px;
+    margin: 3% 0;
+    text-align: center;
+}
+
+.thanks__button {
+    background-color: #f6f2ec;
+    font-family: "Josefin Sans", sans-serif;
+    color: #2d2a2a;
+    border: none;
+    padding: 13px 33px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.thanks__button:hover{
+    background-color: #d6cbc4;
+    transition: all 1s;
+}

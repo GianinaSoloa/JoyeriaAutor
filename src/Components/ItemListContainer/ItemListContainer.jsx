@@ -1,40 +1,57 @@
 import ItemList from '../ItemList/ItemList';
-import data from '../Data/data';
 import '../ItemListContainer/itemListContainer.css'
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import firestoreDB from '../../services/firebase';
+import { getDocs, collection, query, where} from 'firebase/firestore';
 
 
 const ItemListContainer = () =>{
 const [items, setItems] = useState([]);
 const {category} = useParams();
 useEffect(() => {
-        const promise = new Promise( (resolve,reject) => {
 
-        setTimeout(
-                () => {
-                    resolve(data)
-                }, 
-                2000);
-        });
-        
-        promise.then(
-            (respuesta) => {
-                const products = respuesta
-                if(category){
-                    setItems(products.filter(product => product.category === category));
-                }else{
-                    setItems(products)
-                }
-            }
-        ).catch(
-            (error) => {
-                console.error(error);
-            }
-        )
-    },
-    [category]
+    const getItemsFromDB = () => {
+        return new Promise((resolve) => {
+            const products = collection(firestoreDB, "joyas");
+
+            getDocs(products).then( snapshot => {
+                const docsData = snapshot.docs.map(doc =>{
+                    return {...doc.data(), id: doc.id}
+                });
+                resolve(docsData);
+                });
+            })
+    }  
+
+    const getItemsFromDBbyCategory = (category) => {
+        return new Promise((resolve) => {
+            const products = collection(firestoreDB, "joyas");
+            const queryProducts = query(products, where("category", "==", category))
+
+            getDocs(queryProducts).then( snapshot => {
+                const docsData = snapshot.docs.map(doc =>{
+                    return {...doc.data(), id: doc.id}
+                });
+                resolve(docsData);
+                });
+            })
+    }  
+
+
+    if(category){
+        getItemsFromDBbyCategory(category).then((resolve) => {
+        setItems(resolve);
+    });
+    }else{
+        getItemsFromDB().then((resolve) =>{
+        setItems(resolve)
+    });
+}
+},
+[category]
 )
+
 
     return(
         <div className='container__items'>

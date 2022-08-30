@@ -1,43 +1,40 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
-import data from '../Data/data';
 import '../ItemDetailContainer/itemDetailContainer.css';
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import firestoreDB from '../../services/firebase';
-import { getDocs, collection, query, where } from 'firebase/firestore'
+import { getDoc, collection, doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () =>{
 const [item, setItem] = useState({});
 const {id} = useParams();
 
-useEffect(
-    () => {
-        const promise = new Promise( (resolve,reject) => {
-            let itemRequested = data.find (element => element.id == id)
-            resolve(itemRequested);
-        });
+useEffect(() => {
+            const getItemsById = (id) => {
+                return new Promise((resolve, reject) => {
+                    const products = collection(firestoreDB, "joyas");
+                    const docRef = doc(products, id);
 
-         /*  const getItemsFromDB = () => {
-            return new Promise((resolve) => {
-              const todosCollection = collection(firestoreDB, "todos");
-          
-              getDocs(todosCollection).then( snapshot => {
-                const docsData = snapshot.docs.map( doc => doc.data());
-                resolve(docsData);
-                });
-              })      
-          }; */
-        promise.then(
-            (respuesta) => {
-                setItem(respuesta);
-            }
-        ).catch(
-            (error) => {
-                console.error(error);
-            }
-        )
-    },
+                    getDoc(docRef).then( snapshot => {
+                        resolve(
+                            {...snapshot.data(), id: snapshot.id}
+                        )
+                    });
+                })
+            }    
+        
+
+            getItemsById(id).then(
+                (response) => {
+                    setItem(response);
+                }
+                ).catch(
+                (error) => {
+                    console.error(error);
+                }
+            )
+        },
     []
 )
 
