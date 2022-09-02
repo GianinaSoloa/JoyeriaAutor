@@ -1,3 +1,21 @@
 .us{
-    height: 800px;
+    height: 1000px;
+}
+
+.us h1{
+    font-family: "autosignature";
+    font-size: 43px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.us p{
+    text-align: center;
+    padding: 0 10%;
+}
+
+.slider__container{
+    max-width: 800px;
+    max-height: 500px;
+    margin: 5% auto;
 }

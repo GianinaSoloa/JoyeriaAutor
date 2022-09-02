@@ -1,9 +1,13 @@
 footer{
+    width: 100%;
     background-color: #d6cbc4;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    margin-top: 10%;
 }
 
 .footer__contact{

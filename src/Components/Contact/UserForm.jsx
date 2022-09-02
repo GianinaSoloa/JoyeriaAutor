@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./contact.css";
+import Swal from 'sweetalert2'
 
 function UserForm() {
 const [userData, setUserData] = useState({
@@ -12,6 +13,14 @@ const [userData, setUserData] = useState({
   function handleSubmit(evt) {
     evt.preventDefault();
 
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Tu mensaje ha sido enviado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+
     setUserData({
       name: "",
       email: "",
@@ -19,6 +28,7 @@ const [userData, setUserData] = useState({
       consult:"",
     });
   }
+
   function inputChangeHandler(evt) {
     const input = evt.target;
 

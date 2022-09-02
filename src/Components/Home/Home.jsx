@@ -1,8 +1,57 @@
 import "../Home/home.css";
 import Carousel from "../Home/Carousel";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ItemList from '../ItemList/ItemList';
+import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
+import firestoreDB from '../../services/firebase';
+import { getDocs, collection, query, where} from 'firebase/firestore';
 
 const Home = () => {
+const [items, setItems] = useState([]);
+const {favourite} = useParams();
+useEffect(() => {
 
+    const getItemsFromDB = () => {
+        return new Promise((resolve) => {
+            const products = collection(firestoreDB, "joyas");
+
+            getDocs(products).then( snapshot => {
+                const docsData = snapshot.docs.map(doc =>{
+                    return {...doc.data(), id: doc.id}
+                });
+                resolve(docsData);
+                });
+            })
+    }  
+
+    const getItemsFavourite = (favourite) => {
+        return new Promise((resolve) => {
+            const favourites = collection(firestoreDB, "joyas");
+            const queryProducts = query(favourites, where("favourite", "==", "true"))
+
+            getDocs(queryProducts).then( snapshot => {
+                const docsData = snapshot.docs.map(doc =>{
+                    return {...doc.data(), id: doc.id}
+                });
+                resolve(docsData);
+                });
+            })
+    }  
+
+
+    if(favourite){
+        getItemsFavourite(favourite).then((resolve) => {
+        setItems(resolve);
+    });
+    }else{
+        getItemsFromDB().then((resolve) =>{
+        setItems(resolve)
+    });
+}
+},
+[favourite]
+)
     return (
         <div className="home">
             <div className="carusel">
@@ -10,9 +59,8 @@ const Home = () => {
             </div>
             <h1>Como decirtelo joyas</h1>
             <div className="container__home">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget augue non risus vehicula sollicitudin. Aliquam porta eleifend tincidunt. Nunc eget ultrices felis. Sed eu ex mauris. Quisque elementum mi quis velit efficitur, finibus feugiat tellus elementum. Donec feugiat egestas ultrices. Duis venenatis consectetur purus a tempor. Vivamus et nisl velit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare quam non neque maximus consequat. Pellentesque pretium, urna ac eleifend luctus, lacus orci pharetra orci, eget ullamcorper justo velit eget justo. Cras et efficitur erat. Pellentesque faucibus venenatis purus. Nulla rhoncus justo et consectetur iaculis. Donec eleifend velit et nisi tempor 
-                pellentesque. Nunc sed vehicula orci. Pellentesque sed porttitor quam, quis ultrices ex. Nulla scelerisque ligula in porttitor viverra. Praesent eu ex ante. Nullam sollicitudin purus et diam consequat varius. Duis suscipit tempor purus, eget sagittis leo sodales non.</p>
+            <p>Los más elegidos <FavoriteIcon/></p>
+            <ItemList items = {items} />
             </div>
         </div>
     )

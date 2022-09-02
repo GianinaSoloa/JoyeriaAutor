@@ -4,7 +4,7 @@
 }
 
 .container__item{
-    height: 700px;
+    height: auto;
 }
 
 .container__item h1{

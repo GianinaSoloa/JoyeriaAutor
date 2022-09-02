@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import firestoreDB from '../../services/firebase';
 import { getDocs, collection, query, where} from 'firebase/firestore';
+import Spinner from '../Spinner/Spinner';
 
 
 const ItemListContainer = () =>{
@@ -54,10 +55,18 @@ useEffect(() => {
 
 
     return(
-        <div className='container__items'>
-            <h1>Mejor decilo con una joya...</h1>
-            <ItemList items = {items} />
-        </div>
+        <>
+            {items.length === 0 ?
+            <div className='container__items'>
+                <Spinner/>
+            </div>
+                :
+            <div className='container__items'>
+                <h1>Mejor decilo con una joya...</h1>
+                <ItemList items = {items} />
+            </div>
+            }
+        </>
     )
 }
 

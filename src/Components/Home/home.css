@@ -1,6 +1,3 @@
-.home{
-    height: auto;
-}
 
 span.sr-only{
     display: none;
@@ -8,6 +5,7 @@ span.sr-only{
 
 .container__home{
     height: 500px;
+    margin-top: 5%;
 }
 
 .container__home p{

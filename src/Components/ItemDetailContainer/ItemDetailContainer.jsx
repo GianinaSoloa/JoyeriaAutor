@@ -4,10 +4,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import firestoreDB from '../../services/firebase';
 import { getDoc, collection, doc } from 'firebase/firestore';
+import Spinner from '../Spinner/Spinner';
 
 
 const ItemDetailContainer = () =>{
-const [item, setItem] = useState({});
+const [item, setItem] = useState();
 const {id} = useParams();
 
 useEffect(() => {
@@ -35,11 +36,13 @@ useEffect(() => {
                 }
             )
         },
-    []
+    [id]
 )
 
-    return(
-        <div className='container__item'>
+return(
+    <div className='container__item'>
+        { item ?
+        <>
             <h1>Detalle</h1>
             <ItemDetail
                 key = {item?.id}
@@ -50,8 +53,12 @@ useEffect(() => {
                 price = {item?.price}
                 pictureUrl = {item?.pictureUrl}
             />
-        </div>
-    )
+        </>
+        :
+            <Spinner/>
+        }
+    </div>
+);
 }
 
 export default ItemDetailContainer;
