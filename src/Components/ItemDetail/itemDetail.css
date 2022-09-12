@@ -67,3 +67,21 @@
 .swal2-styled.swal2-confirm:focus {
     box-shadow: 0 0 0 3px #d6cbc4!important;
 }
+
+@media (max-width: 768px) {
+
+.detail {
+    flex-direction: column;
+    margin-bottom: 70%;
+}
+
+.detail__text > h4 {
+    margin: 3px;
+    font-size: 13px;
+}
+
+body > div.swal2-container.swal2-center.swal2-backdrop-show > div{
+    font-size: 11px;
+}
+
+}

@@ -14,3 +14,12 @@
     font-size: 43px;
     font-weight: 500; 
 }
+
+@media (max-width: 768px) {
+
+.container__item h1{
+    font-size: 31px; 
+}
+
+}
+

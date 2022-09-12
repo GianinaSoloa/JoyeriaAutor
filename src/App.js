@@ -8,7 +8,6 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import Cart from './Components/Cart/Cart'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from './Store/CartContext';
-import firestoreDB from './services/firebase';
 import Checkout from './Components/Checkout/Checkout';
 import Footer from './Components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';

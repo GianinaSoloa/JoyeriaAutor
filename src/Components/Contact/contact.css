@@ -78,3 +78,29 @@ input:focus-visible{
     align-items: center;
     margin-bottom: 5%;
 }
+
+@media (max-width: 768px) {
+
+.contact h1 {
+    font-size: 39px;
+}
+
+.form-item {
+    width: 80%;
+    
+}
+    
+form {
+    margin: 0 10%;
+    width: 100%;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.forms__buttons {
+    width: 80%;
+}
+
+}

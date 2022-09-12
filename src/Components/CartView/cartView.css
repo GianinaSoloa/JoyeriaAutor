@@ -47,6 +47,21 @@ td p {
     align-items: flex-end;
 }
 
+.item__quantity .counter {
+    margin: 0 20px;
+}
+
+.item__quantity .clicks {
+    margin: 0 30%;
+}
+
+table > tbody > tr > td> p{
+    margin-bottom: 0;
+}
+
+.counter button{
+    line-height: 10px;
+}
 
 .emptycart{
     font-size: 25px;
@@ -133,3 +148,77 @@ td p {
     margin-top: 3%;
 }
 
+
+@media (max-width: 768px) {
+
+.cart__title {
+    font-size: 31px;
+}
+
+.cart {
+    width: 100%;
+    align-items: center;
+}
+
+table {
+    width: 90%;
+}
+
+thead tr{
+    font-size: 11px;
+    padding: 3%;
+}
+
+tr {
+    line-height: 9px !important;
+    height: 40px !important;
+}
+
+.itemlist__title {
+    padding: 0 2%;
+}
+.item__img img {
+    width: 30px;
+}
+
+td p {
+    font-size: 11px;
+}
+
+table > tbody .counter{
+    margin: 0px;
+}
+
+table > tbody .clicks{
+    margin: 0 15%;
+}
+
+.clicks{
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.cart__totals {
+    width: 80%;
+    margin: 21% 0;
+}
+
+.subtotal__cart > td > p{
+    font-size: 13px;
+}
+
+.cart{
+    margin-bottom: 300px;
+}
+
+.finalstep {
+    justify-content: space-around;
+}
+
+.finalstep .button {
+    padding: 15px 22px;
+    margin: 0;
+    
+}
+
+}

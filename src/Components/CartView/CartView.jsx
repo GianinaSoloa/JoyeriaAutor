@@ -4,7 +4,7 @@ import React, {useContext} from "react";
 import { CartContext } from '../../Store/CartContext';
 
 const CartView = ({id, title, price, pictureUrl, quantity}) => {
-    const {removeItem, subtotalPrice} = useContext(CartContext);
+    const {removeItem, subtotalPrice, decreaseQuantity, increaseQuantity} = useContext(CartContext);
     return (
             <tr>
                 <td className="item__remove">
@@ -17,13 +17,17 @@ const CartView = ({id, title, price, pictureUrl, quantity}) => {
                     <p>{title}</p>
                 </td>
                 <td className="item__price">
-                    <p>{price}</p>
+                    <p>${price}</p>
                 </td>
                 <td className="item__quantity">
-                    <p>{quantity}</p>
+                    <div className="counter">
+                        <button onClick={decreaseQuantity}> - </button>
+                        <div className="clicks">{quantity}</div>
+                        <button onClick={increaseQuantity}> + </button>
+                    </div>
                 </td>
                 <td className="item__quantity">
-                    <p>{subtotalPrice(price,quantity)}</p>
+                    <p>${subtotalPrice(price,quantity)}</p>
                 </td>
             </tr>  
         );

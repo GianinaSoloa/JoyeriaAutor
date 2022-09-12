@@ -9,10 +9,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: 30%!important;
+  margin-bottom: 25%!important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* GENERALES */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif !important;
+  color: #2d2a2a; 
+}
+
+
+

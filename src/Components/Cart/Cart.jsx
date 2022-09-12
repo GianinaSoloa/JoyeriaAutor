@@ -48,7 +48,7 @@ const Cart = () => {
                             <tbody>
                                 <tr className="subtotal__cart">
                                     <th>Subtotal</th>
-                                    <td><p>{totalPrice()}</p></td>
+                                    <td><p>${totalPrice()}</p></td>
                                 </tr>
                                 <tr className="shipping">
                                     <th>Envío</th>
@@ -56,7 +56,7 @@ const Cart = () => {
                                 </tr>
                                 <tr className="total__cart">
                                     <th>Total</th>
-                                    <td><strong><p>{totalPrice()}</p></strong></td>
+                                    <td><strong><p>${totalPrice()}</p></strong></td>
                                 </tr>
                             </tbody>
                         </table>

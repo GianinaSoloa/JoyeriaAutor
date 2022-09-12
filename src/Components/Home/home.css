@@ -8,11 +8,6 @@ span.sr-only{
     margin-top: 5%;
 }
 
-.container__home p{
-    text-align: center;
-    padding: 0 10%;
-}
-
 .home h1{
     font-family: "autosignature";
     font-size: 43px;
@@ -28,3 +23,24 @@ span.sr-only{
     height: 650px;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+
+    .home{
+        height: 2000px;
+    }
+
+    .carousel, .carousel-inner {
+        height: 350px;
+    }
+    
+    .carousel-item > img{
+        height: 350px;
+    }
+    
+    .home h1 {
+        font-size: 31px;
+        margin: 8% 5%;
+    }
+
+    }

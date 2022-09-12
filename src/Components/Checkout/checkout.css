@@ -63,3 +63,35 @@
     background-color: #d6cbc4;
     transition: all 1s;
 }
+
+@media (max-width: 768px) {
+
+.checkout {
+    height: 580px;
+}
+
+.checkout p {
+    font-size: 25px;
+    margin: 8%;
+}
+
+.thanks__container {
+    height: 800px;
+}
+
+.thanks__icon {
+    margin: 13% auto;
+}
+
+.thanks__container h2 {
+    font-size: 19px;
+    margin: 5% 0;
+}
+
+.thanks__container p {
+    font-size: 15px;
+    margin-top: 7%;
+    margin-bottom: 18%;
+}
+
+}

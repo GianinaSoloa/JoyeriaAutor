@@ -14,6 +14,7 @@ const CartProvider = ({ children }) =>{
 
     useEffect(() => {
         getQtyProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cartItems]
 
     )
@@ -63,8 +64,15 @@ const CartProvider = ({ children }) =>{
         return totalQty;
     }
 
+    const decreaseQuantity = (quantity) =>{
+        quantity > 1 ?  setQtyProducts(quantity-1) : alert("mínimo disponible");
+    }
+
+    const increaseQuantity = (quantity, stock) =>{
+        quantity < stock ?  setQtyProducts(quantity+1) : alert("no hay más stock");
+    }
     return(
-        <CartContext.Provider value={{cartItems, qtyProducts, addToCart, removeItem, isInCart, clear, totalPrice, subtotalPrice, totalItems}}>
+        <CartContext.Provider value={{cartItems, qtyProducts, addToCart, removeItem, isInCart, clear, totalPrice, subtotalPrice, totalItems, decreaseQuantity, increaseQuantity}}>
             {children}
         </CartContext.Provider>
     )

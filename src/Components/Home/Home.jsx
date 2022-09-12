@@ -3,13 +3,12 @@ import Carousel from "../Home/Carousel";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ItemList from '../ItemList/ItemList';
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
 import firestoreDB from '../../services/firebase';
 import { getDocs, collection, query, where} from 'firebase/firestore';
 
 const Home = () => {
 const [items, setItems] = useState([]);
-const {favourite} = useParams();
+const favourite = true;
 useEffect(() => {
 
     const getItemsFromDB = () => {
@@ -28,7 +27,7 @@ useEffect(() => {
     const getItemsFavourite = (favourite) => {
         return new Promise((resolve) => {
             const favourites = collection(firestoreDB, "joyas");
-            const queryProducts = query(favourites, where("favourite", "==", "true"))
+            const queryProducts = query(favourites, where("favourite", "==", true))
 
             getDocs(queryProducts).then( snapshot => {
                 const docsData = snapshot.docs.map(doc =>{
@@ -57,9 +56,8 @@ useEffect(() => {
             <div className="carusel">
                 <Carousel/>
             </div>
-            <h1>Como decirtelo joyas</h1>
             <div className="container__home">
-            <p>Los más elegidos <FavoriteIcon/></p>
+            <h1>Los mas elegidos por ustedes <FavoriteIcon/></h1>
             <ItemList items = {items} />
             </div>
         </div>

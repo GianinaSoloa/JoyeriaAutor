@@ -61,10 +61,19 @@ useEffect(() => {
                 <Spinner/>
             </div>
                 :
-            <div className='container__items'>
-                <h1>Mejor decilo con una joya...</h1>
-                <ItemList items = {items} />
-            </div>
+            <>  
+                {category ?
+                    <div className='container__category'>
+                        <h1>{category}</h1>
+                        <ItemList items = {items} />
+                    </div>
+                    : 
+                    <div className='container__items'>
+                        <h1>Mejor decilo con una joya...</h1>
+                        <ItemList items = {items} />
+                    </div>
+                }
+            </>
             }
         </>
     )

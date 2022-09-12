@@ -19,3 +19,16 @@
     max-height: 500px;
     margin: 5% auto;
 }
+
+@media (max-width: 768px) {
+
+.us h1 {
+    font-size: 31px;
+    margin-top: 8%;
+    }
+
+.us {
+    height: 860px;
+}
+
+}
