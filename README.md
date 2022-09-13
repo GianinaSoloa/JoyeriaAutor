@@ -34,7 +34,7 @@ Ingresando a cada producto podrás ver el detalle del mismo y agregarlo al carri
 
 ##### SHOP
 
-<img src='/public/img/us.png' alt="Screenshot Shop Cómo Decírtelo Joyas"/>
+<img src='/public/img/shop.png' alt="Screenshot Shop Cómo Decírtelo Joyas"/>
 
 
 ##### CATEGORY
