@@ -24,37 +24,37 @@ Ingresando a cada producto podrás ver el detalle del mismo y agregarlo al carri
 
 ##### HOME
 
-<img src='/img/home.png' alt="Screenshot Home Cómo Decírtelo Joyas"/>
+<img src='/public/img/home.png' alt="Screenshot Home Cómo Decírtelo Joyas"/>
 
 
 ##### NOSOTROS
 
-<img src='/img/us.png' alt="Screenshot Us Cómo Decírtelo Joyas"/>
+<img src='/public/img/us.png' alt="Screenshot Us Cómo Decírtelo Joyas"/>
 
 
 ##### SHOP
 
-<img src='/img/us.png' alt="Screenshot Shop Cómo Decírtelo Joyas"/>
+<img src='/public/img/us.png' alt="Screenshot Shop Cómo Decírtelo Joyas"/>
 
 
 ##### CATEGORY
 
-<img src='/img/category.png' alt="Screenshot Category Cómo Decírtelo Joyas"/>
+<img src='/public/img/category.png' alt="Screenshot Category Cómo Decírtelo Joyas"/>
 
 
 ##### PRODUCT DETAIL
 
-<img src='/img/detail.png' alt="Screenshot Product Detail Cómo Decírtelo Joyas"/>
+<img src='/public/img/detail.png' alt="Screenshot Product Detail Cómo Decírtelo Joyas"/>
 
 
 ##### CART
 
-<img src='/img/cart.png' alt="Screenshot Cart Cómo Decírtelo Joyas"/>
+<img src='/public/img/cart.png' alt="Screenshot Cart Cómo Decírtelo Joyas"/>
 
 
 ##### CONTACTO
 
-<img src='/img/contact.png' alt="Screenshot Contact Cómo Decírtelo Joyas"/>
+<img src='/public/img/contact.png' alt="Screenshot Contact Cómo Decírtelo Joyas"/>
 
 
 ***
