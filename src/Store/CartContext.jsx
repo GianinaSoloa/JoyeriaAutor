@@ -71,6 +71,7 @@ const CartProvider = ({ children }) =>{
     const increaseQuantity = (quantity, stock) =>{
         quantity < stock ?  setQtyProducts(quantity+1) : alert("no hay más stock");
     }
+
     return(
         <CartContext.Provider value={{cartItems, qtyProducts, addToCart, removeItem, isInCart, clear, totalPrice, subtotalPrice, totalItems, decreaseQuantity, increaseQuantity}}>
             {children}

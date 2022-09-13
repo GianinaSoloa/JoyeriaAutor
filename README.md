@@ -1,27 +1,79 @@
-Aplicación: Joyería de Autor 
+# Web y Tienda Online Responsive de Joyería de Autor. 
 
-GIF ANIMADO: https://drive.google.com/file/d/1rnwUe25M0A0UQjmUXIYOTJVVksnsbROk/view?usp=sharing
+*** 
 
-Secciones:
+### ¿Te interesa verlo?
+
+enlace: 
+
+gif: https://drive.google.com/file/d/1Y__B2Ly6T9IZWMgt9-FXXYP3Mdbqrdjx/view?usp=sharing
+
+***
+
+#### Secciones:
 - HOME
 - NOSOTROS
-- SHOP - Al hacer clic se pueden ver todos los productos a la venta o bien posicionádose sobre el mismo (hover) se pueden ver todas las categorías. Es posible acceder a cada producto para ver la descripción, foto y precio e ingresarlo al carrito. 
+- SHOP --> Al hacer clic podrás elegir entre ver todos los productos o filtrarlos por categoría.
 - CONTACTO
 
-Tecnologías y librerías:
+Ingresando a cada producto podrás ver el detalle del mismo y agregarlo al carrito mientras haya stock disponible. Una vez en el carrito, podrás modificar la cantidad, eliminar un producto específico asi como vaciar el carrito por completo. Al finalizar la compra, se te pedirán ciertos datos los cuales serán enviados a Firebase(base de datos utilizada) y finalmente se te dirige a la página de gracias.
 
-Interfaz realizada con ReactJS - Create React App
-Estilos con CSS puro
-Ruteo con React Router Dom
-Backend con Firebase (proximamente)
+***
+
+#### Capturas:
+
+##### HOME
+
+<img src='/img/home.png' alt="Screenshot Home Cómo Decírtelo Joyas"/>
+
+
+##### NOSOTROS
+
+<img src='/img/us.png' alt="Screenshot Us Cómo Decírtelo Joyas"/>
+
+
+##### SHOP
+
+<img src='/img/us.png' alt="Screenshot Shop Cómo Decírtelo Joyas"/>
+
+
+##### CATEGORY
+
+<img src='/img/category.png' alt="Screenshot Category Cómo Decírtelo Joyas"/>
+
+
+##### PRODUCT DETAIL
+
+<img src='/img/detail.png' alt="Screenshot Product Detail Cómo Decírtelo Joyas"/>
+
+
+##### CART
+
+<img src='/img/cart.png' alt="Screenshot Cart Cómo Decírtelo Joyas"/>
+
+
+##### CONTACTO
+
+<img src='/img/contact.png' alt="Screenshot Contact Cómo Decírtelo Joyas"/>
+
+
+***
+
+#### Tecnologías y librerías utilizadas:
+
+HTML
+CSS
+Bootstrap
+JavaScript
+React Js
+Firebase
+
+
+***
+
+#### Instalación
 
 Descargar y correr el proyecto
-Una vez clonado o descargado el proyecto, instalar dependencias:
-
-npm install
-Correr el servidor:
-
-npm start
-Se abre una pestaña del navegador en el puerto 3000:
-
-Sino copiar esta URL y pegarla en el navegador: http://localhost:3000
+1. Una vez clonado o descargado el proyecto, instalar dependencias: npm install
+2. Correr el servidor: npm start
+3. Se abre una pestaña del navegador en el puerto 3000: Sino copiar esta URL y pegarla en el navegador: http://localhost:3000
