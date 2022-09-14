@@ -1,5 +1,4 @@
 import "../Footer/footer.css";
-import { Link } from "react-router-dom";
 import MailIcon from '@mui/icons-material/Mail';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneIcon from '@mui/icons-material/Phone';
