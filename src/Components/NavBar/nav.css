@@ -23,7 +23,7 @@ nav {
     padding: 0 29px !important;
 }
 
-#basic-nav-dropdown a{
+#basic-nav-dropdown {
     padding: 0 29px !important;
 }
 
@@ -65,7 +65,6 @@ a.active{
 
 .dropdown-toggle::after {
     border-top: 0 !important;
-    margin-top: -7px;
 }
 
 .dropdown-item.active, .dropdown-item:active {

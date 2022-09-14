@@ -38,6 +38,8 @@ const Cart = () => {
                             price={item.price}
                             pictureUrl={item.pictureUrl} 
                             quantity={item.quantity} 
+                            stock={item.stock} 
+                            index={index}
                             />
                         ))}
                         </tbody>

@@ -1,16 +1,25 @@
 import "../ItemCount/itemCount.css";
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const ItemCount = ({initial, stock, onAdd}) =>{
     const[quantity, setQuantity] = useState(initial);
 
     const decreaseQuantity = () =>{
-        quantity > initial ? setQuantity(quantity-1) : alert("mínimo disponible");
+        quantity > initial ? setQuantity(quantity-1) : Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Mínimo disponible',
+        });
     }
 
     const increaseQuantity = () =>{
-        quantity < stock ? setQuantity(quantity+1) : alert("no hay más stock");
+        quantity < stock ? setQuantity(quantity+1) : Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Lo sentimos, no hay más stock',
+        });
     }
 
 

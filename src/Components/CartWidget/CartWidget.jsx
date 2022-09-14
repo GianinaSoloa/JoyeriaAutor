@@ -8,7 +8,9 @@ const CartWidget = () => {
     return (
         <>
         <ShoppingCartIcon className="iconCart"/>
-        <p className='quantity__cartwidget'>{qtyProducts}</p>
+        {qtyProducts >= 1 ? <p className='quantity__cartwidget'>{qtyProducts}</p> :
+        undefined
+        }
         </>
     )
 }

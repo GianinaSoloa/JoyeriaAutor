@@ -1,3 +1,7 @@
 .quantity__cartwidget{
     display: inline;
 }
+
+#basic-navbar-nav  svg{
+    font-size: 20px;
+}

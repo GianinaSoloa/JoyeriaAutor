@@ -1,9 +1,11 @@
 import React, {createContext, useState, useEffect} from 'react';
+import Swal from 'sweetalert2';
 
 export const CartContext = createContext()
 
 const CartProvider = ({ children }) =>{
     const [cartItems, setCartItems] = useState([]);
+    let cartCopy = [...cartItems];
     const [qtyProducts, setQtyProducts] = useState(0);
 
     const getQtyProducts = () =>{
@@ -20,7 +22,7 @@ const CartProvider = ({ children }) =>{
     )
 
     const addToCart = (item) => {
-        let cartCopy = [...cartItems];
+
         if (isInCart(item.id)) {
             const found = cartItems.find (i => i.id === Number(item.id));
             const index = cartItems.indexOf(found);
@@ -64,12 +66,24 @@ const CartProvider = ({ children }) =>{
         return totalQty;
     }
 
-    const decreaseQuantity = (quantity) =>{
-        quantity > 1 ?  setQtyProducts(quantity-1) : alert("mínimo disponible");
+    const decreaseQuantity = (index) =>{
+        cartCopy[index].quantity === 1 ? Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Mínimo disponible',
+        }) :
+        cartCopy[index].quantity -= 1;  
+        setCartItems(cartCopy);  
     }
 
-    const increaseQuantity = (quantity, stock) =>{
-        quantity < stock ?  setQtyProducts(quantity+1) : alert("no hay más stock");
+    const increaseQuantity = (index) =>{
+        cartCopy[index].quantity >= cartCopy[index].stock ? Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Stock no disponible',
+        }) :
+        cartCopy[index].quantity += 1;  
+        setCartItems(cartCopy);  
     }
 
     return(
