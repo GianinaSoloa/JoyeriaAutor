@@ -4,9 +4,9 @@
 
 ### ¿Te interesa verlo?
 
-enlace: https://63236a0f9bf9c600097e56a7--iridescent-parfait-1be6f3.netlify.app/
+Netlify: https://63237896604f6600091d5fff--iridescent-parfait-1be6f3.netlify.app/
 
-gif: https://drive.google.com/file/d/1Y__B2Ly6T9IZWMgt9-FXXYP3Mdbqrdjx/view?usp=sharing
+Gif Animado (baja resolución): https://drive.google.com/file/d/1Y__B2Ly6T9IZWMgt9-FXXYP3Mdbqrdjx/view?usp=sharing
 
 ***
 
