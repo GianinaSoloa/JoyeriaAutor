@@ -27,6 +27,7 @@
     background-color: #f6f2ec;
     border: none;
     padding: 4px;
+    color: #333333 !important;
 }
 
 .itemCount > button:hover{
