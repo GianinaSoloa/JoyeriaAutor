@@ -4,7 +4,7 @@
 
 ### ¿Te interesa verlo?
 
-Netlify: https://63237896604f6600091d5fff--iridescent-parfait-1be6f3.netlify.app/
+Netlify: https://comodecirtelojoyas.netlify.app/
 
 Gif Animado (baja resolución): https://drive.google.com/file/d/1Y__B2Ly6T9IZWMgt9-FXXYP3Mdbqrdjx/view?usp=sharing
 
